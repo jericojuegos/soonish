@@ -49,6 +49,15 @@
             </tr>
             <tr>
                 <th scope="row">
+                    <label for="soonish_whitelisted_ips"><?php _e('IP Whitelisting', 'soonish'); ?></label>
+                </th>
+                <td>
+                    <textarea id="soonish_whitelisted_ips" name="soonish_whitelisted_ips" rows="5" cols="40" class="large-text"><?php echo esc_textarea(get_option('soonish_whitelisted_ips', '')); ?></textarea>
+                    <p class="description">Listed IPs will not be affected by the coming soon mode and their users will see the normal site. Write one IP per line. If the user's IP changes, they will no longer be whitelisted.</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
                     <label for="soonish_launch_date"><?php _e('Launch Date', 'soonish'); ?></label>
                 </th>
                 <td>

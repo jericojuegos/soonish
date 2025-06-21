@@ -17,6 +17,13 @@ class Soonish_Frontend {
         if (!get_option('soonish_enabled', false)) {
             return;
         }
+        // IP Whitelisting
+        $whitelist_raw = get_option('soonish_whitelisted_ips', '');
+        $whitelist = array_filter(array_map('trim', explode("\n", $whitelist_raw)));
+        $user_ip = $_SERVER['REMOTE_ADDR'] ?? '';
+        if ($user_ip && in_array($user_ip, $whitelist)) {
+            return;
+        }
         if (current_user_can('manage_options') || is_admin()) {
             return;
         }

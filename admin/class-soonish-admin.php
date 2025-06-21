@@ -31,6 +31,7 @@ class Soonish_Admin {
         register_setting('soonish_options', 'soonish_description');
         register_setting('soonish_options', 'soonish_launch_date');
         register_setting('soonish_options', 'soonish_background');
+        register_setting('soonish_options', 'soonish_whitelisted_ips');
     }
 
     public function settings_page() {
