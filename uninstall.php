@@ -1,0 +1,2 @@
+<?php
+// Uninstall logic placeholder 

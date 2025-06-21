@@ -1,9 +1,12 @@
+<?php
+// Settings page template placeholder
+?>
 <div class="wrap">
     <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
     <form method="post" action="options.php">
         <?php
         settings_fields('soonish_options');
-        do_settings_sections('soonish_options');
+        do_settings_sections('soonish');
         ?>
         <table class="form-table">
             <tr>
@@ -55,4 +58,7 @@
         </table>
         <?php submit_button(); ?>
     </form>
+    <span id="soonish-toggle-status">
+        Status: <strong><?php echo get_option('soonish_enabled', false) ? 'Enabled' : 'Disabled'; ?></strong>
+    </span>
 </div>
