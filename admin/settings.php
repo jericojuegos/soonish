@@ -58,7 +58,4 @@
         </table>
         <?php submit_button(); ?>
     </form>
-    <span id="soonish-toggle-status">
-        Status: <strong><?php echo get_option('soonish_enabled', false) ? 'Enabled' : 'Disabled'; ?></strong>
-    </span>
 </div>
